@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Epoxy Floor Quotes | GetEpoxyQuotes</title>
+  <meta name="description" content="Get accurate epoxy floor cost estimates. Fill out our quick 2-step calculator and receive up to 3 competitive quotes from vetted local installers." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://getepoxyquotes.online/cost-calculator-step1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Epoxy Floor Cost Calculator | GetEpoxyQuotes" />
+  <meta property="og:description" content="Get accurate epoxy floor quotes in minutes. Compare local pros, pricing, and timelines." />
+  <meta property="og:url" content="https://getepoxyquotes.online/cost-calculator-step1" />
+  <meta property="og:image" content="logo.png" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #2b3ff0;
+      --blue-dark: #1a2bc4;
+      --blue-bg: #2d3de8;
+      --black: #111111;
+      --white: #ffffff;
+      --gray-light: #f5f5f5;
+      --gray-text: #555555;
+      --gray-border: #dddddd;
+      --font-main: 'Noto Sans', sans-serif;
+      --font-body: 'Heebo', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--black);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: #141414;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 0 40px;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .navbar__logo svg { width: 44px; height: 44px; }
+    .navbar__logo img { height: 44px; width: auto; display: block; }
+
+    .navbar__nav {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .navbar__nav a {
+      color: var(--white);
+      font-size: 15px;
+      font-family: var(--font-main);
+      transition: opacity 0.2s;
+    }
+    .navbar__nav a:hover { opacity: 0.75; }
+
+    .navbar__right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .navbar__phone {
+      color: var(--white);
+      font-size: 14px;
+      font-family: var(--font-main);
+    }
+    .navbar__phone a {
+      color: var(--white);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      font-family: var(--font-main);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { background: var(--blue-dark); }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 76px;
+      left: 0;
+      right: 0;
+      background: #141414;
+      z-index: 999;
+      padding: 24px 24px 32px;
+      flex-direction: column;
+      border-top: 1px solid #333;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      color: var(--white);
+      font-size: 16px;
+      font-family: var(--font-main);
+      padding: 14px 0;
+      border-bottom: 1px solid #333;
+    }
+    .mobile-nav .mobile-phone {
+      color: #aaa;
+      font-size: 13px;
+      padding-top: 20px;
+    }
+    .mobile-nav .mobile-phone a {
+      color: var(--white);
+      font-weight: 600;
+      border: none;
+      padding: 0;
+    }
+    .mobile-nav .btn-primary {
+      margin-top: 16px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ===== CALCULATOR HERO ===== */
+    .calc-hero {
+      background: linear-gradient(180deg, #1a1a1a 0%, var(--blue-bg) 100%);
+      padding: 72px 40px 96px;
+      text-align: center;
+      position: relative;
+    }
+
+    .calc-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      background: var(--white);
+      clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    }
+
+    .calc-hero h1 {
+      font-family: var(--font-main);
+      font-weight: 800;
+      font-size: clamp(28px, 5vw, 48px);
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .calc-hero p {
+      color: rgba(255,255,255,0.85);
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ===== CALCULATOR WRAPPER ===== */
+    .calc-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* Progress bar */
+    .progress-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 48px;
+    }
+
+    .progress-step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .progress-step__circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid var(--gray-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--gray-text);
+      background: var(--white);
+      transition: all 0.3s;
+      flex-shrink: 0;
+    }
+
+    .progress-step__label {
+      font-family: var(--font-main);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-text);
+      transition: color 0.3s;
+    }
+
+    .progress-line {
+      width: 80px;
+      height: 2px;
+      background: var(--gray-border);
+      margin: 0 12px;
+      transition: background 0.3s;
+    }
+
+    .progress-step.active .progress-step__circle {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: var(--white);
+    }
+    .progress-step.active .progress-step__label { color: var(--blue); }
+
+    .progress-step.done .progress-step__circle {
+      background: #22c55e;
+      border-color: #22c55e;
+      color: var(--white);
+    }
+    .progress-step.done .progress-step__circle::after {
+      content: '✓';
+    }
+    .progress-line.done { background: #22c55e; }
+
+    /* ===== FORM STEPS ===== */
+    .form-step {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .form-step.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateX(30px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .form-step h2 {
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 6px;
+      color: var(--black);
+    }
+
+    .form-step .step-desc {
+      color: var(--gray-text);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    /* ===== FORM FIELDS ===== */
+    .form-group { margin-bottom: 20px; }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-main);
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: var(--black);
+    }
+
+    .form-group label .req { color: var(--blue); }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      border: 1.5px solid var(--gray-border);
+      padding: 14px 16px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--black);
+      background: var(--white);
+      outline: none;
+      appearance: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      border-radius: 0;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(43,63,240,0.08);
+    }
+
+    .form-group input.error,
+    .form-group select.error {
+      border-color: #ef4444;
+    }
+
+    .form-group .error-msg {
+      display: none;
+      color: #ef4444;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    .form-group.has-error .error-msg { display: block; }
+    .form-group.has-error input,
+    .form-group.has-error select { border-color: #ef4444; }
+
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    .form-group select option[value=""] { color: #aaa; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ===== BUTTONS ===== */
+    .form-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .btn-next, .btn-submit {
+      flex: 1;
+      background: var(--blue);
+      color: var(--white);
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-next:hover, .btn-submit:hover { background: var(--blue-dark); }
+    .btn-next:active, .btn-submit:active { transform: scale(0.99); }
+
+    .btn-back {
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-main);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 16px 24px;
+      border: 1.5px solid var(--gray-border);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-back:hover { background: var(--gray-light); }
+
+    /* ===== TRUST BADGES ===== */
+    .trust-badges {
+      display: flex;
+      gap: 20px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--gray-text);
+    }
+
+    .badge__icon {
+      width: 32px;
+      height: 32px;
+      background: #e8eaff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* ===== THANK YOU PAGE ===== */
+    .thankyou-page {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .thankyou-page.show { display: block; }
+
+    .thankyou-icon {
+      width: 96px;
+      height: 96px;
+      background: #e8fdf2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      font-size: 48px;
+      animation: popIn 0.4s ease 0.1s both;
+    }
+
+    @keyframes popIn {
+      0%  { transform: scale(0.5); opacity: 0; }
+      70% { transform: scale(1.1); }
+      100%{ transform: scale(1);   opacity: 1; }
+    }
+
+    .thankyou-page h2 {
+      font-family: var(--font-main);
+      font-weight: 800;
+      font-size: clamp(26px, 4vw, 38px);
+      margin-bottom: 16px;
+    }
+
+    .thankyou-page .subtitle {
+      color: var(--gray-text);
+      font-size: 16px;
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .thankyou-steps {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .thankyou-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 160px;
+    }
+
+    .thankyou-step__icon {
+      width: 56px;
+      height: 56px;
+      background: #e8eaff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .thankyou-step p { font-size: 13px; color: var(--gray-text); text-align: center; line-height: 1.5; }
+
+    .thankyou-page .btn-home {
+      background: var(--blue);
+      color: var(--white);
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 36px;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+    .thankyou-page .btn-home:hover { background: var(--blue-dark); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #141414;
+      color: var(--white);
+      padding: 48px 40px 28px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #333;
+    }
+
+    .footer__brand { display: flex; flex-direction: column; gap: 14px; }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 17px;
+    }
+    .footer__logo svg { width: 36px; height: 36px; }
+
+    .footer__desc { color: #aaa; font-size: 13px; line-height: 1.7; max-width: 380px; }
+    .footer__email a { color: #aaa; font-size: 13px; text-decoration: underline; }
+    .footer__email a:hover { color: var(--white); }
+
+    .footer__socials {
+      display: flex;
+      gap: 10px;
+    }
+    .footer__socials a {
+      width: 34px;
+      height: 34px;
+      background: #333;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--white);
+      transition: background 0.2s;
+    }
+    .footer__socials a:hover { background: var(--blue); }
+
+    .footer__nav h4 {
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .footer__nav ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer__nav a { color: #aaa; font-size: 13px; transition: color 0.2s; }
+    .footer__nav a:hover { color: var(--white); }
+
+    .footer__bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #666;
+    }
+
+    /* ===== POPUP ===== */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .overlay.open { display: flex; }
+
+    .modal {
+      background: var(--white);
+      width: 100%;
+      max-width: 460px;
+      padding: 36px;
+      position: relative;
+      animation: fadeUp 0.25s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal__close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+      background: none;
+      border: none;
+    }
+    .modal__close:hover { color: var(--black); }
+
+    .modal h3 {
+      font-family: var(--font-main);
+      font-weight: 800;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .modal p.modal-desc { color: var(--gray-text); font-size: 13px; margin-bottom: 20px; }
+
+    .modal .form-group input,
+    .modal .form-group select {
+      font-size: 14px;
+      padding: 12px 14px;
+    }
+
+    .modal .form-submit {
+      width: 100%;
+      background: var(--blue);
+      color: var(--white);
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .modal .form-submit:hover { background: var(--blue-dark); }
+
+    .modal-thankyou {
+      display: none;
+      text-align: center;
+      padding: 16px 0;
+    }
+    .modal-thankyou.show { display: block; }
+    .modal-thankyou .ty-icon { font-size: 48px; margin-bottom: 12px; }
+    .modal-thankyou h3 { font-family: var(--font-main); font-weight: 800; font-size: 20px; margin-bottom: 8px; }
+    .modal-thankyou p { color: var(--gray-text); font-size: 13px; margin-bottom: 20px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .navbar { padding: 0 20px; }
+      .navbar__nav, .navbar__phone, .navbar__right .btn-primary { display: none; }
+      .burger { display: flex; }
+
+      .calc-hero { padding: 56px 20px 80px; }
+      .form-row { grid-template-columns: 1fr; }
+      .progress-line { width: 40px; }
+      .progress-step__label { display: none; }
+      .trust-badges { flex-direction: column; gap: 12px; }
+
+      footer { padding: 36px 20px 20px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .footer__bottom { flex-direction: column; gap: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .calc-hero h1 { font-size: 24px; }
+      .modal { padding: 28px 18px; }
+      .thankyou-steps { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo.png" alt="GetEpoxyQuotes Logo" />
+    </a>
+
+    <ul class="navbar__nav">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="index.html#why-choose-us">Why Choose Us?</a></li>
+    </ul>
+
+    <div class="navbar__right">
+      <span class="navbar__phone">Call Now <a href="tel:+13462791824" onclick="trackPhoneClick()">+1 (346) 279-1824</a></span>
+      <a href="calculator.html" class="btn-primary">Get Free Quotes</a>
+    </div>
+
+    <div class="burger" id="burger" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#how-it-works" onclick="closeMobileNav()">How It Works</a>
+    <a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a>
+    <a href="index.html#why-choose-us" onclick="closeMobileNav()">Why Choose Us?</a>
+    <div class="mobile-phone">Call Now <a href="tel:+13462791824" onclick="trackPhoneClick()">+1 (346) 279-1824</a></div>
+    <a href="calculator.html" class="btn-primary" style="margin-top:16px;text-align:center;">Get Free Quotes</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="calc-hero">
+    <h1>Epoxy Floor Cost Calculation</h1>
+    <p>These details help contractors estimate your project more accurately.<br>The more accurate the info, the more accurate the quotes.</p>
+  </div>
+
+  <!-- CALCULATOR -->
+  <div class="calc-wrapper">
+
+    <!-- Progress -->
+    <div class="progress-bar" id="progressBar">
+      <div class="progress-step active" id="step-ind-1">
+        <div class="progress-step__circle">1</div>
+        <span class="progress-step__label">Project Details</span>
+      </div>
+      <div class="progress-line" id="progress-line-1"></div>
+      <div class="progress-step" id="step-ind-2">
+        <div class="progress-step__circle">2</div>
+        <span class="progress-step__label">Your Contact Info</span>
+      </div>
+    </div>
+
+    <!-- STEP 1: Project Details -->
+    <div class="form-step active" id="step1">
+      <h2>Tell us about your project</h2>
+      <p class="step-desc">Help contractors estimate your job accurately — the more you share, the better your quotes.</p>
+
+      <div class="form-group" id="fg-objectType">
+        <label>Object Type <span class="req">*</span></label>
+        <select id="objectType">
+          <option value="">What area needs coating?</option>
+          <option value="Garage">Garage</option>
+          <option value="Residential interior">Residential interior</option>
+          <option value="Commercial/industrial">Commercial/industrial</option>
+        </select>
+        <div class="error-msg">Please select an object type.</div>
+      </div>
+
+      <div class="form-group" id="fg-areaSize">
+        <label>Area Size <span class="req">*</span></label>
+        <select id="areaSize">
+          <option value="">Approx. size</option>
+          <option value="Under 250 sq ft (1-car)">Under 250 sq ft (1-car)</option>
+          <option value="250–500 sq ft (2-car)">250–500 sq ft (2-car)</option>
+          <option value="500–750 sq ft (3-car)">500–750 sq ft (3-car)</option>
+          <option value="750+ / Not sure">750+ / Not sure</option>
+        </select>
+        <div class="error-msg">Please select an area size.</div>
+      </div>
+
+      <div class="form-group" id="fg-timeLimits">
+        <label>Time Limits <span class="req">*</span></label>
+        <select id="timeLimits">
+          <option value="">Project timeline</option>
+          <option value="ASAP (0–2 weeks)">ASAP (0–2 weeks)</option>
+          <option value="2–4 weeks">2–4 weeks</option>
+          <option value="1–3 months">1–3 months</option>
+          <option value="Just researching">Just researching</option>
+        </select>
+        <div class="error-msg">Please select a project timeline.</div>
+      </div>
+
+      <div class="form-group" id="fg-zip1">
+        <label>ZIP Code <span class="req">*</span></label>
+        <input type="text" id="zip1" placeholder="e.g. 77001" list="zip-suggestions" maxlength="10" autocomplete="postal-code" />
+        <div class="error-msg">Please enter a valid 5-digit ZIP code.</div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn-next" onclick="goToStep2()">
+          Next: Contact Info →
+        </button>
+      </div>
+
+      <div class="trust-badges">
+        <div class="badge"><div class="badge__icon">🔒</div><span>100% Free, No Obligation</span></div>
+        <div class="badge"><div class="badge__icon">⚡</div><span>Response within 24 hours</span></div>
+        <div class="badge"><div class="badge__icon">🛡️</div><span>Privacy Protected</span></div>
+      </div>
+    </div>
+
+    <!-- STEP 2: Contact Info -->
+    <div class="form-step" id="step2">
+      <h2>Almost done! Your contact details</h2>
+      <p class="step-desc">Local pros will reach out to you directly with accurate pricing.</p>
+
+      <div class="form-row">
+        <div class="form-group" id="fg-fullName">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" id="fullName" placeholder="Your full name" autocomplete="name" />
+          <div class="error-msg">Please enter your name.</div>
+        </div>
+        <div class="form-group" id="fg-phone">
+          <label>Phone Number <span class="req">*</span></label>
+          <input type="tel" id="phone" placeholder="(713) 555-0100" autocomplete="tel" />
+          <div class="error-msg">Please enter a valid US phone number.</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" id="fg-email">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" id="email" placeholder="your@email.com" autocomplete="email" />
+          <div class="error-msg">Please enter a valid email address.</div>
+        </div>
+        <div class="form-group" id="fg-zip2">
+          <label>ZIP Code <span class="req">*</span></label>
+          <input type="text" id="zip2" placeholder="e.g. 77001" list="zip-suggestions" maxlength="10" autocomplete="postal-code" />
+          <div class="error-msg">Please enter a valid 5-digit ZIP code.</div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn-back" onclick="goToStep1()">← Back</button>
+        <button class="btn-submit" onclick="submitForm()">Get My Quotes 🚀</button>
+      </div>
+
+      <div class="trust-badges">
+        <div class="badge"><div class="badge__icon">🔒</div><span>Your info is safe & private</span></div>
+        <div class="badge"><div class="badge__icon">📞</div><span>Max 3 pros will contact you</span></div>
+      </div>
+    </div>
+
+    <!-- THANK YOU -->
+    <div class="thankyou-page" id="thankyouPage">
+      <div class="thankyou-icon">✅</div>
+      <h2>Thank You!</h2>
+      <p class="subtitle">Your request is received. We are currently matching your project details with up to 3 vetted pros in your area.</p>
+
+      <div class="thankyou-steps">
+        <div class="thankyou-step">
+          <div class="thankyou-step__icon">📋</div>
+          <p>Your project details have been sent to local experts</p>
+        </div>
+        <div class="thankyou-step">
+          <div class="thankyou-step__icon">🔍</div>
+          <p>We're matching you with up to 3 vetted local pros</p>
+        </div>
+        <div class="thankyou-step">
+          <div class="thankyou-step__icon">📱</div>
+          <p>Expect a call or email within 24 hours</p>
+        </div>
+      </div>
+
+      <a href="index.html" class="btn-home">Back to Home</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="images/logo.png" alt="GetEpoxyQuotes" />
+        </div>
+        <p class="footer__desc">GetEpoxyQuotes connects homeowners with independent contractors. Availability varies by area.</p>
+        <div class="footer__email"><a href="mailto:support@getepoxyquotes.online">support@getepoxyquotes.online</a></div>
+        <div class="footer__socials">
+          <a href="https://facebook.com/" target="_blank">f</a>
+          <a href="https://instagram.com/" target="_blank">in</a>
+          <a href="https://twitter.com/" target="_blank">𝕏</a>
+          <a href="https://youtube.com/" target="_blank">▶</a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="calculator.html">Services</a></li>
+          <li><a href="privacy.html">Privacy Policies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 GetEpoxyQuotes. All rights reserved.</span>
+      <a href="privacy.html" style="color:#666;">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <!-- EXIT INTENT POPUP -->
+  <div class="overlay" id="popupOverlay">
+    <div class="modal">
+      <button class="modal__close" onclick="closePopup()">×</button>
+
+      <div id="modalFormWrap">
+        <h3>Wait — Get Free Quotes</h3>
+        <p class="modal-desc">Leave your details and we'll match you with up to 3 local pros.</p>
+
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="mName" placeholder="Your full name" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" id="mPhone" placeholder="(713) 555-0100" autocomplete="tel" />
+          <div class="error-msg" id="mPhoneErr" style="display:none">Please enter a valid US phone number.</div>
+        </div>
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" id="mEmail" placeholder="your@email.com" autocomplete="email" />
+          <div class="error-msg" id="mEmailErr" style="display:none">Please enter a valid email address.</div>
+        </div>
+        <div class="form-group">
+          <label>ZIP Code *</label>
+          <input type="text" id="mZip" placeholder="e.g. 77001" list="zip-suggestions" maxlength="10" autocomplete="postal-code" />
+        </div>
+        <button class="form-submit" onclick="submitModal()">Get Free Quotes</button>
+      </div>
+
+      <div class="modal-thankyou" id="modalThankyou">
+        <div class="ty-icon">✅</div>
+        <h3>Thank You!</h3>
+        <p>We are currently matching your project details with up to 3 vetted pros in your area.</p>
+        <button class="btn-primary" onclick="closePopup()" style="width:100%;">Ok</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZIP datalist (Houston + major US) -->
+  <datalist id="zip-suggestions">
+    <option value="77001">Houston Downtown</option>
+    <option value="77002">Houston Midtown</option>
+    <option value="77003">Houston EaDo</option>
+    <option value="77004">Houston Museum District</option>
+    <option value="77005">West University Place</option>
+    <option value="77006">Montrose</option>
+    <option value="77007">Heights / Washington Ave</option>
+    <option value="77008">Houston Heights</option>
+    <option value="77009">Northside</option>
+    <option value="77019">River Oaks</option>
+    <option value="77024">Memorial</option>
+    <option value="77025">Meyerland</option>
+    <option value="77027">Upper Kirby</option>
+    <option value="77030">Medical Center</option>
+    <option value="77036">Westwood / Sharpstown</option>
+    <option value="77040">Northwest Houston</option>
+    <option value="77042">Westchase</option>
+    <option value="77043">Spring Branch</option>
+    <option value="77056">Galleria</option>
+    <option value="77057">Galleria / Briargrove</option>
+    <option value="77058">Clear Lake</option>
+    <option value="77063">Westheimer</option>
+    <option value="77064">Willowbrook</option>
+    <option value="77065">Cypress / FM 1960</option>
+    <option value="77070">Cypress</option>
+    <option value="77077">Energy Corridor</option>
+    <option value="77079">Memorial / Energy Corridor</option>
+    <option value="77080">Spring Branch West</option>
+    <option value="77082">Westheimer Lakes</option>
+    <option value="77084">Katy / Bear Creek</option>
+    <option value="77090">Champions</option>
+    <option value="77095">Copperfield</option>
+    <option value="77096">Meyerland Area</option>
+    <option value="77098">Greenway / Upper Kirby</option>
+    <option value="77099">Alief</option>
+    <!-- Harris County suburbs -->
+    <option value="77015">Channelview</option>
+    <option value="77032">Aldine</option>
+    <option value="77038">Greenspoint</option>
+    <option value="77044">Sheldon / Cloverleaf</option>
+    <option value="77060">Greenspoint area</option>
+    <option value="77061">Gulfgate</option>
+    <option value="77073">Spring (Harris)</option>
+    <option value="77086">Acres Homes</option>
+    <option value="77088">Acres Homes North</option>
+    <option value="77092">Oak Forest</option>
+    <option value="77094">Katy (Harris)</option>
+    <!-- Fort Bend / Sugar Land / Katy -->
+    <option value="77401">Bellaire</option>
+    <option value="77406">Richmond / Katy</option>
+    <option value="77407">Grand Mission</option>
+    <option value="77450">Katy</option>
+    <option value="77459">Missouri City</option>
+    <option value="77469">Richmond</option>
+    <option value="77471">Rosenberg</option>
+    <option value="77477">Stafford</option>
+    <option value="77478">Sugar Land</option>
+    <option value="77479">Sugar Land South</option>
+    <option value="77494">Katy West</option>
+    <option value="77498">Sugar Land / Stafford</option>
+    <!-- The Woodlands / Conroe / Spring -->
+    <option value="77301">Conroe</option>
+    <option value="77304">Conroe West</option>
+    <option value="77354">Magnolia</option>
+    <option value="77380">The Woodlands</option>
+    <option value="77381">The Woodlands West</option>
+    <option value="77382">The Woodlands South</option>
+    <option value="77384">The Woodlands North</option>
+    <option value="77385">Spring</option>
+    <option value="77386">Spring East</option>
+    <option value="77388">Spring West</option>
+    <option value="77389">Spring Northwest</option>
+    <!-- Pearland / League City / Clear Lake -->
+    <option value="77546">Friendswood</option>
+    <option value="77573">League City</option>
+    <option value="77578">Pearland</option>
+    <option value="77581">Pearland East</option>
+    <option value="77584">Pearland South</option>
+    <option value="77586">Seabrook / El Lago</option>
+    <option value="77598">Webster / Nassau Bay</option>
+    <!-- Other major TX cities -->
+    <option value="78201">San Antonio, TX</option>
+    <option value="75201">Dallas, TX</option>
+    <option value="78701">Austin, TX</option>
+    <option value="76101">Fort Worth, TX</option>
+    <option value="78401">Corpus Christi, TX</option>
+    <option value="79901">El Paso, TX</option>
+    <!-- Other US cities -->
+    <option value="10001">New York, NY</option>
+    <option value="90001">Los Angeles, CA</option>
+    <option value="60601">Chicago, IL</option>
+    <option value="85001">Phoenix, AZ</option>
+    <option value="33101">Miami, FL</option>
+    <option value="30301">Atlanta, GA</option>
+    <option value="98101">Seattle, WA</option>
+    <option value="80201">Denver, CO</option>
+  </datalist>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    // ===== Collected step 1 data =====
+    let step1Data = {};
+
+    // ===== Validation helpers =====
+    function isValidPhone(v) {
+      // Accept: (713) 555-0100 / 713-555-0100 / 7135550100 / +17135550100
+      return /^(\+?1[\s.\-]?)?\(?([2-9][0-9]{2})\)?[\s.\-]?([2-9][0-9]{2})[\s.\-]?([0-9]{4})$/.test(v.replace(/\s/g,''));
+    }
+
+    function isValidEmail(v) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+    }
+
+    function isValidZip(v) {
+      return /^\d{5}(-\d{4})?$/.test(v.trim());
+    }
+
+    function setFieldError(groupId, hasError) {
+      document.getElementById(groupId).classList.toggle('has-error', hasError);
+    }
+
+    // ===== Step validation =====
+    function validateField(id, groupId) {
+      const val = document.getElementById(id).value.trim();
+      const ok = val.length > 0;
+      setFieldError(groupId, !ok);
+      return ok;
+    }
+
+    function validatePhoneField(id, groupId) {
+      const val = document.getElementById(id).value.trim();
+      const ok = isValidPhone(val);
+      setFieldError(groupId, !ok);
+      return ok;
+    }
+
+    function validateEmailField(id, groupId) {
+      const val = document.getElementById(id).value.trim();
+      const ok = isValidEmail(val);
+      setFieldError(groupId, !ok);
+      return ok;
+    }
+
+    function validateZipField(id, groupId) {
+      const val = document.getElementById(id).value.trim();
+      const ok = isValidZip(val);
+      setFieldError(groupId, !ok);
+      return ok;
+    }
+
+    // Inline validation on blur
+    document.addEventListener('DOMContentLoaded', function() {
+      const phoneEl = document.getElementById('phone');
+      const emailEl = document.getElementById('email');
+      const zip1El  = document.getElementById('zip1');
+      const zip2El  = document.getElementById('zip2');
+
+      if (phoneEl) phoneEl.addEventListener('blur', () => validatePhoneField('phone', 'fg-phone'));
+      if (emailEl) emailEl.addEventListener('blur', () => validateEmailField('email', 'fg-email'));
+      if (zip1El)  zip1El.addEventListener('blur',  () => validateZipField('zip1', 'fg-zip1'));
+      if (zip2El)  zip2El.addEventListener('blur',  () => validateZipField('zip2', 'fg-zip2'));
+    });
+
+    // ===== Step navigation =====
+    function goToStep2() {
+      let valid = true;
+      valid = validateField('objectType', 'fg-objectType') & valid;
+      valid = validateField('areaSize',   'fg-areaSize')   & valid;
+      valid = validateField('timeLimits', 'fg-timeLimits') & valid;
+      valid = validateZipField('zip1',    'fg-zip1')       & valid;
+      if (!valid) return;
+
+      step1Data = {
+        objectType: document.getElementById('objectType').value,
+        areaSize:   document.getElementById('areaSize').value,
+        timeLimits: document.getElementById('timeLimits').value,
+        zip:        document.getElementById('zip1').value.trim()
+      };
+
+      // Pre-fill zip2
+      document.getElementById('zip2').value = step1Data.zip;
+
+      document.getElementById('step1').classList.remove('active');
+      document.getElementById('step2').classList.add('active');
+      document.getElementById('step-ind-1').classList.remove('active');
+      document.getElementById('step-ind-1').classList.add('done');
+      document.getElementById('step-ind-1').querySelector('.progress-step__circle').textContent = '✓';
+      document.getElementById('progress-line-1').classList.add('done');
+      document.getElementById('step-ind-2').classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goToStep1() {
+      document.getElementById('step2').classList.remove('active');
+      document.getElementById('step1').classList.add('active');
+      document.getElementById('step-ind-2').classList.remove('active');
+      document.getElementById('step-ind-1').classList.remove('done');
+      document.getElementById('step-ind-1').classList.add('active');
+      document.getElementById('step-ind-1').querySelector('.progress-step__circle').textContent = '1';
+      document.getElementById('progress-line-1').classList.remove('done');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ===== Final submit =====
+    function submitForm() {
+      let valid = true;
+      valid = validateField('fullName',     'fg-fullName') & valid;
+      valid = validatePhoneField('phone',   'fg-phone')    & valid;
+      valid = validateEmailField('email',   'fg-email')    & valid;
+      valid = validateZipField('zip2',      'fg-zip2')     & valid;
+      if (!valid) return;
+
+      const contactData = {
+        fullName: document.getElementById('fullName').value.trim(),
+        phone:    document.getElementById('phone').value.trim(),
+        email:    document.getElementById('email').value.trim(),
+        zip:      document.getElementById('zip2').value.trim()
+      };
+
+      dataLayer.push({
+        event:          'form_submit',
+        event_category: 'lead',
+        event_label:    'calculator_main_form',
+        object_type:    step1Data.objectType,
+        area_size:      step1Data.areaSize,
+        time_limits:    step1Data.timeLimits,
+        zip:            contactData.zip
+      });
+
+      const emailBody = `New Lead — Calculator\n\n=== Project ===\nObject Type: ${step1Data.objectType}\nArea Size: ${step1Data.areaSize}\nTimeline: ${step1Data.timeLimits}\nZIP: ${step1Data.zip}\n\n=== Contact ===\nName: ${contactData.fullName}\nPhone: ${contactData.phone}\nEmail: ${contactData.email}\nZIP: ${contactData.zip}`;
+
+      fetch('https://formsubmit.co/ajax/sarafunla.ppc@gmail.com', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: contactData.fullName, email: contactData.email,
+          phone: contactData.phone, zip: contactData.zip,
+          project: `${step1Data.objectType} | ${step1Data.areaSize} | ${step1Data.timeLimits}`,
+          _subject: 'New Epoxy Quote Lead — Calculator',
+          message: emailBody
+        })
+      }).catch(() => {});
+
+      document.getElementById('step2').classList.remove('active');
+      document.getElementById('progressBar').style.display = 'none';
+      document.getElementById('thankyouPage').classList.add('show');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ===== Phone click =====
+    function trackPhoneClick() {
+      dataLayer.push({ event: 'phone_click', event_category: 'contact', event_label: '+1 (346) 279-1824' });
+    }
+
+    // ===== Mobile nav =====
+    function toggleMobileNav() { document.getElementById('mobileNav').classList.toggle('open'); }
+    function closeMobileNav()   { document.getElementById('mobileNav').classList.remove('open'); }
+
+    // ===== Popup =====
+    function openPopup() {
+      document.getElementById('popupOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePopup() {
+      document.getElementById('popupOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('popupOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closePopup();
+    });
+
+    let exitShown = false;
+    document.addEventListener('mouseleave', function(e) {
+      if (e.clientY < 5 && !exitShown) { exitShown = true; setTimeout(openPopup, 200); }
+    });
+
+    let lastScrollY = 0;
+    window.addEventListener('scroll', function() {
+      if (window.innerWidth <= 768) {
+        const cur = window.scrollY;
+        if (lastScrollY > cur + 100 && !exitShown && cur > 200) { exitShown = true; openPopup(); }
+        lastScrollY = cur;
+      }
+    });
+
+    // ===== Modal submit =====
+    function submitModal() {
+      const name  = document.getElementById('mName').value.trim();
+      const phone = document.getElementById('mPhone').value.trim();
+      const email = document.getElementById('mEmail').value.trim();
+      const zip   = document.getElementById('mZip').value.trim();
+
+      let ok = true;
+
+      if (!name) { ok = false; document.getElementById('mName').style.borderColor = '#ef4444'; }
+      else document.getElementById('mName').style.borderColor = '';
+
+      const pErr = document.getElementById('mPhoneErr');
+      if (!isValidPhone(phone)) {
+        ok = false;
+        document.getElementById('mPhone').style.borderColor = '#ef4444';
+        pErr.style.display = 'block';
+      } else { document.getElementById('mPhone').style.borderColor = ''; pErr.style.display = 'none'; }
+
+      const eErr = document.getElementById('mEmailErr');
+      if (!isValidEmail(email)) {
+        ok = false;
+        document.getElementById('mEmail').style.borderColor = '#ef4444';
+        eErr.style.display = 'block';
+      } else { document.getElementById('mEmail').style.borderColor = ''; eErr.style.display = 'none'; }
+
+      if (!isValidZip(zip)) { ok = false; document.getElementById('mZip').style.borderColor = '#ef4444'; }
+      else document.getElementById('mZip').style.borderColor = '';
+
+      if (!ok) return;
+
+      dataLayer.push({ event: 'form_submit', event_category: 'lead', event_label: 'popup_form_calculator' });
+
+      fetch('https://formsubmit.co/ajax/sarafunla.ppc@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name, email, phone, zip,
+          _subject: 'New Epoxy Quote Lead (Popup — Calculator)',
+          message: `Popup Form\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nZIP: ${zip}` })
+      }).catch(() => {});
+
+      document.getElementById('modalFormWrap').style.display = 'none';
+      document.getElementById('modalThankyou').classList.add('show');
+    }
+  </script>
+</body>
+</html>
