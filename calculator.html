@@ -64,7 +64,7 @@
       top: 0;
       z-index: 1000;
       padding: 0 40px;
-      height: 76px;
+      height: 88px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -81,7 +81,12 @@
     }
 
     .navbar__logo svg { width: 44px; height: 44px; }
-    .navbar__logo img { height: 44px; width: auto; display: block; }
+    .navbar__logo img {
+      height: 72px;
+      width: auto;
+      display: block;
+      mix-blend-mode: screen;
+    }
 
     .navbar__nav {
       display: flex;
@@ -100,18 +105,37 @@
     .navbar__right {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 28px;
     }
 
     .navbar__phone {
-      color: var(--white);
+      color: rgba(255,255,255,0.75);
       font-size: 14px;
       font-family: var(--font-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     .navbar__phone a {
       color: var(--white);
       font-weight: 600;
       text-decoration: underline;
+      transition: opacity 0.2s;
+    }
+    .navbar__phone a:hover { opacity: 0.75; }
+
+    /* Navbar CTA — blue outline button */
+    .navbar .btn-primary {
+      background: transparent !important;
+      color: var(--white) !important;
+      border: 2px solid var(--blue) !important;
+      font-weight: 600 !important;
+      padding: 10px 22px !important;
+      transition: background 0.2s, color 0.2s !important;
+    }
+    .navbar .btn-primary:hover {
+      background: var(--blue) !important;
+      color: var(--white) !important;
     }
 
     .btn-primary {
@@ -123,11 +147,12 @@
       padding: 12px 24px;
       border: none;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.1s;
       display: inline-block;
       white-space: nowrap;
     }
     .btn-primary:hover { background: var(--blue-dark); }
+    .btn-primary:active { transform: scale(0.98); }
 
     .burger {
       display: none;
@@ -142,18 +167,20 @@
       height: 2px;
       background: var(--white);
       border-radius: 2px;
+      transition: all 0.3s;
     }
 
     .mobile-nav {
       display: none;
       position: fixed;
-      top: 76px;
+      top: 88px;
       left: 0;
       right: 0;
       background: #141414;
       z-index: 999;
       padding: 24px 24px 32px;
       flex-direction: column;
+      gap: 0;
       border-top: 1px solid #333;
     }
     .mobile-nav.open { display: flex; }
@@ -534,71 +561,51 @@
     footer {
       background: #141414;
       color: var(--white);
-      padding: 48px 40px 28px;
+      padding: 56px 40px 32px;
     }
 
-    .footer-inner {
+    .footer-grid {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 2fr 1fr;
-      gap: 48px;
-      padding-bottom: 32px;
+      gap: 64px;
+      padding-bottom: 40px;
       border-bottom: 1px solid #333;
     }
 
-    .footer__brand { display: flex; flex-direction: column; gap: 14px; }
+    .footer__brand { display: flex; flex-direction: column; gap: 16px; }
 
-    .footer__logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--font-main);
-      font-weight: 700;
-      font-size: 17px;
-    }
+    .footer__logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-main); font-weight: 700; font-size: 17px; }
     .footer__logo svg { width: 36px; height: 36px; }
+    .footer__logo img { height: 52px; width: auto; mix-blend-mode: screen; }
 
     .footer__desc { color: #aaa; font-size: 13px; line-height: 1.7; max-width: 380px; }
     .footer__email a { color: #aaa; font-size: 13px; text-decoration: underline; }
     .footer__email a:hover { color: var(--white); }
 
-    .footer__socials {
-      display: flex;
-      gap: 10px;
-    }
-    .footer__socials a {
-      width: 34px;
-      height: 34px;
-      background: #333;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: var(--white);
-      transition: background 0.2s;
-    }
-    .footer__socials a:hover { background: var(--blue); }
+    .footer__socials { display: none; }
 
     .footer__nav h4 {
       font-family: var(--font-main);
       font-weight: 700;
-      font-size: 13px;
-      margin-bottom: 14px;
+      font-size: 14px;
+      margin-bottom: 16px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
+
     .footer__nav ul { display: flex; flex-direction: column; gap: 10px; }
-    .footer__nav a { color: #aaa; font-size: 13px; transition: color 0.2s; }
+    .footer__nav a { color: #aaa; font-size: 14px; transition: color 0.2s; }
     .footer__nav a:hover { color: var(--white); }
 
     .footer__bottom {
       max-width: 1200px;
       margin: 0 auto;
-      padding-top: 20px;
+      padding-top: 24px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       font-size: 12px;
       color: #666;
     }
@@ -694,7 +701,7 @@
       .trust-badges { flex-direction: column; gap: 12px; }
 
       footer { padding: 36px 20px 20px; }
-      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer__bottom { flex-direction: column; gap: 8px; }
     }
 
@@ -710,7 +717,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <a href="index.html" class="navbar__logo">
       <img src="images/logo.png" alt="GetEpoxyQuotes Logo" />
     </a>
@@ -719,6 +726,7 @@
       <li><a href="index.html#how-it-works">How It Works</a></li>
       <li><a href="index.html#pricing">Pricing</a></li>
       <li><a href="index.html#why-choose-us">Why Choose Us?</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
     </ul>
 
     <div class="navbar__right">
@@ -731,6 +739,7 @@
     </div>
   </nav>
 
+  <!-- Mobile nav -->
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html#how-it-works" onclick="closeMobileNav()">How It Works</a>
     <a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a>
@@ -888,9 +897,9 @@
 
   </div>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="footer-inner">
+    <div class="footer-grid">
       <div class="footer__brand">
         <div class="footer__logo">
           <img src="images/logo.png" alt="GetEpoxyQuotes" />
@@ -904,6 +913,7 @@
           <a href="https://youtube.com/" target="_blank">▶</a>
         </div>
       </div>
+
       <div class="footer__nav">
         <h4>Navigation</h4>
         <ul>
@@ -913,9 +923,10 @@
         </ul>
       </div>
     </div>
+
     <div class="footer__bottom">
       <span>© 2025 GetEpoxyQuotes. All rights reserved.</span>
-      <a href="privacy.html" style="color:#666;">Privacy Policy</a>
+      <span><a href="privacy.html" style="color:#666;">Privacy Policy</a></span>
     </div>
   </footer>
 
@@ -1222,12 +1233,6 @@
 
     // ===== Popup =====
     function openPopup() {
-      document.getElementById('popupOverlay').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closePopup() {
-      document.getElementById('popupOverlay').classList.remove('open');
-      document.body.style.overflow = '';
     }
     document.getElementById('popupOverlay').addEventListener('click', function(e) {
       if (e.target === this) closePopup();

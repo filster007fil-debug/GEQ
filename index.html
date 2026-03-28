@@ -257,20 +257,18 @@
     }
 
     .hero {
-      min-height: 680px;
+      min-height: 700px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: flex-end; /* push content toward bottom */
-      padding: 40px 80px 160px; /* top small, bottom large — content sits low */
+      justify-content: flex-end;
+      padding: 40px 80px 100px;
       position: relative;
       overflow: hidden;
-      /* Simple diagonal: top = left side goes lower; bottom = right side goes lower */
-      clip-path: polygon(0 4%, 100% 0%, 100% 93%, 0 100%);
-      margin-bottom: -80px;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      margin-bottom: -60px;
     }
 
-    /* photo bg with zoom animation */
     .hero::before {
       content: '';
       position: absolute;
@@ -280,30 +278,27 @@
       z-index: 0;
     }
 
-    /* Multi-layer overlay:
-       - top: keep bright area of photo visible
-       - bottom: strong dark so checklist/button sit on near-black bg
-       - left: dark for h1 legibility */
     .hero-bg-img {
       position: absolute;
       inset: 0;
       background:
         linear-gradient(to bottom,
-          rgba(0,0,0,0.45) 0%,
-          rgba(0,0,0,0.50) 40%,
-          rgba(0,0,0,0.82) 68%,
-          rgba(0,0,0,0.92) 100%
+          rgba(0,0,0,0.50) 0%,
+          rgba(0,0,0,0.35) 30%,
+          rgba(0,0,0,0.30) 50%,
+          rgba(0,0,0,0.55) 65%,
+          rgba(0,0,0,0.80) 85%,
+          rgba(0,0,0,0.95) 100%
         ),
         linear-gradient(to right,
-          rgba(0,0,0,0.55) 0%,
-          rgba(0,0,0,0.15) 60%,
+          rgba(0,0,0,0.50) 0%,
+          rgba(0,0,0,0.15) 50%,
           transparent 100%
         );
       z-index: 1;
     }
     .hero-shape { display: none; }
 
-    /* single unified content block — h1 + checklist + button */
     .hero__content {
       position: relative;
       z-index: 2;
@@ -331,7 +326,6 @@
       gap: 12px;
       margin-bottom: 14px;
     }
-    /* Black inner, blue ring, white checkmark */
     .hero__checklist li::before {
       content: '';
       width: 26px;
@@ -347,16 +341,14 @@
       box-sizing: border-box;
     }
 
-    /* CTA — pushed low toward the V-notch center */
     .hero__cta-wrap {
       position: relative;
       z-index: 2;
       display: flex;
       justify-content: center;
       width: 100%;
-      max-width: 680px;
-      margin-top: 72px;
-      padding-bottom: 32px;
+      margin-top: 56px;
+      padding-bottom: 60px;
       animation: hero-content-in 0.75s cubic-bezier(0.22,1,0.36,1) 0.4s both;
     }
     .hero__cta-wrap a.btn-primary {
@@ -384,18 +376,15 @@
       box-shadow: 0 2px 10px rgba(43,63,240,0.35) !important;
     }
 
-    /* entrance animation */
     @keyframes hero-content-in {
       from { opacity: 0; transform: translateY(28px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
     /* ===== SECTION COMMON ===== */
-    /* Offset anchor scroll for sticky navbar (88px) */
     [id] { scroll-margin-top: 96px; }
     .section { padding: 80px 40px; }
-    /* First section after diagonal-clipped hero needs top padding */
-    .hero + .section { padding-top: 120px; }
+    .hero + .section { padding-top: 80px; }
     .section-inner { max-width: 1200px; margin: 0 auto; }
 
     .section-title {
@@ -1047,9 +1036,9 @@
     .qpop-thankyou h3 { font-family: var(--font-main); font-size: 20px; font-weight: 800; margin-bottom: 8px; }
     .qpop-thankyou p { color: var(--gray-text); font-size: 14px; margin-bottom: 24px; line-height: 1.7; }
 
-    @media (max-width: 640px) {
-      .qpop-modal { flex-direction: column; }
-      .qpop-left { width: 100%; padding: 32px 24px; }
+    @media (max-width: 860px) {
+      .qpop-modal { flex-direction: column; max-height: 95vh; }
+      .qpop-left { width: 100%; padding: 32px 24px; gap: 20px; }
       .qpop-right { padding: 28px 24px; }
     }
 
@@ -1198,7 +1187,7 @@
       .navbar__right .btn-primary { display: none; }
       .burger { display: flex; }
 
-      .hero { padding: 40px 20px 140px; clip-path: polygon(0 2%, 100% 0%, 100% 95%, 0 100%); margin-bottom: -60px; min-height: 580px; }
+      .hero { padding: 40px 20px 80px; clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%); margin-bottom: -40px; min-height: 580px; }
 
       .section { padding: 56px 20px; }
       .cards-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -1502,7 +1491,7 @@
           <img src="images/logo.png" alt="GetEpoxyQuotes" />
         </div>
         <p class="footer__desc">GetEpoxyQuotes connects homeowners with independent contractors. Availability varies by area.</p>
-        <div class="footer__email"><a href="/cdn-cgi/l/email-protection#2f5c5a5f5f405d5b6f484a5b4a5f4057565e5a405b4a5c0140414346414a"><span class="__cf_email__" data-cfemail="0675737676697472466163726376697e7f7773697263752869686a6f6863">[email&#160;protected]</span></a></div>
+        <div class="footer__email"><a href="mailto:support@getepoxyquotes.online">support@getepoxyquotes.online</a></div>
         <div class="footer__socials">
           <a href="https://facebook.com/" target="_blank">f</a>
           <a href="https://instagram.com/" target="_blank">in</a>
@@ -1819,7 +1808,7 @@
     <option value="75501">Texarkana, TX</option>
   </datalist>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // ===== SCROLL REVEAL =====
     (function() {
       var els = document.querySelectorAll('.reveal, .reveal-fade');
